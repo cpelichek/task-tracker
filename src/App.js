@@ -6,6 +6,7 @@ import Tasks from "./components/Tasks";
 import { concatSeries } from "async";
 
 function App() {
+  const [showAddTask, setShowAddTask] = useState(false)
   const [tasks, setTasks] = useState([
     {
       id: 1,
@@ -46,8 +47,8 @@ function App() {
 
   return (
     <div className="container">
-      <Header />
-      <AddTask onAdd={addTask} />
+      <Header onToggleAdd={() => setShowAddTask(!showAddTask)} showAdd={showAddTask} />
+      {showAddTask && <AddTask onAdd={addTask} />}
       {tasks.length > 0 ? <Tasks tasks={tasks} onDelete={deleteTask} onToggle={toggleReminder} /> : <h3>💪 No more tasks! 🦾</h3>}
     </div>
   );
