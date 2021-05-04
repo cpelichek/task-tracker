@@ -57,6 +57,10 @@ body {
   transform: scale(0.98);
 }
 
+.btn.btn-success {
+  background-color: var(--green-500);
+}
+
 .btn-block {
   display: block;
   width: 100%;
