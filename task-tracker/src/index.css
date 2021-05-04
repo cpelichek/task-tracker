@@ -1,13 +1,119 @@
-body {
+@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;600&display=swap");
+
+* {
+  box-sizing: border-box;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+:root {
+  --black: #000;
+  --gray-50: #f7f8fa;
+  --green-500: #04d361;
+  --steelblue: #4682b4;
+  --white: #fff;
+}
+
+body {
+  font-family: "Lexend", sans-serif;
+}
+
+.container {
+  max-width: 31.25rem;
+  margin: 1.875rem auto;
+  overflow: auto;
+  min-height: 18.75rem;
+  border: 1px solid var(--steelblue);
+  padding: 1.875rem;
+  border-radius: 0.3125rem;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.25rem;
+}
+
+.btn {
+  display: inline-block;
+  background: var(--black);
+  color: var(--white);
+  border: none;
+  padding: 0.625rem 1.25rem;
+  margin: 0.3125rem;
+  border-radius: 0.3125rem;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+.btn:focus {
+  outline: none;
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+.btn-block {
+  display: block;
+  width: 100%;
+}
+.task {
+  background: var(--gray-50);
+  margin: 0.3125rem;
+  padding: 0.625rem 1.25rem;
+  cursor: pointer;
+}
+
+.task.reminder {
+  border-left: 0.3125rem solid var(--green-500);
+}
+
+.task h3 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.add-form {
+  margin-bottom: 2.5rem;
+}
+
+.form-control {
+  margin: 1.25rem 0;
+}
+
+.form-control label {
+  display: block;
+}
+
+.form-control input {
+  width: 100%;
+  height: 2.5rem;
+  margin: 0.3125rem;
+  padding: 0.1875rem 0.4375rem;
+  font-size: 1.0625rem;
+}
+
+.form-control-check {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.form-control-check label {
+  flex: 1;
+}
+
+.form-control-check input {
+  flex: 2;
+  height: 1.25rem;
+}
+
+footer {
+  margin-top: 1.875rem;
+  text-align: center;
 }
