@@ -10,6 +10,7 @@
   --black: #000;
   --gray-50: #f7f8fa;
   --green-500: #04d361;
+  --purple-800: #6f48c9;
   --steelblue: #4682b4;
   --white: #fff;
 }
@@ -57,8 +58,16 @@ body {
   transform: scale(0.98);
 }
 
+.btn.btn-primary {
+  background: var(--steelblue);
+}
+
 .btn.btn-success {
   background-color: var(--green-500);
+}
+
+.btn.btn-warning {
+  background: var(--purple-800);
 }
 
 .btn-block {
