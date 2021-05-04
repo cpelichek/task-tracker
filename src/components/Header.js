@@ -9,7 +9,7 @@ const Header = ({ title }) => {
   return (
     <header className="header">
       <h1>{title}</h1>
-      <Button btnType="btn-success" text="Add" onClick={onClick} />
+      <Button btnType="success" text="Add" onClick={onClick} />
     </header>
   );
 };
